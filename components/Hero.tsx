@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -74,14 +75,11 @@ export default function Hero() {
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
           />
           <motion.div
-            className="glow-gold absolute inset-0 m-auto flex h-28 w-28 items-center justify-center"
+            className="glow-gold absolute inset-0 m-auto flex h-48 w-48 items-center justify-center"
             animate={{ scale: [1, 1.07, 1] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            <svg width="112" height="112" viewBox="0 0 40 40">
-              <rect width="40" height="40" rx="10" fill="#D6AC50" />
-              <path d="M8 29 L17 11 L26 29 M12 23 H22 M27 11 H34 L27 29 H34" stroke="#111A35" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+<Image src="/logo/logo.png" alt="ADZ-tech Digital Solutions" width={220} height={220} priority className="rounded-3xl" />
           </motion.div>
           {chips.map(({ Icon, label, pos, d }) => (
             <motion.div
