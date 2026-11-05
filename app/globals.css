@@ -10,3 +10,7 @@ body { background: #111A35; color: #fff; -webkit-tap-highlight-color: transparen
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+.marquee { animation: marquee 28s linear infinite; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }

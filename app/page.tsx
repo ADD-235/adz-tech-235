@@ -1,5 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Marquee from "@/components/Marquee";
+import Reveal from "@/components/Reveal";
+import ScrollUI from "@/components/ScrollUI";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
@@ -13,9 +16,18 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 export default function Home() {
   return (
     <>
+      <ScrollUI />
       <Navbar />
       <main>
-        <Hero /><About /><Services /><Portfolio /><Trainings /><Pricing /><Testimonials /><Contact />
+        <Hero />
+        <Marquee />
+        <Reveal><About /></Reveal>
+        <Services />
+        <Reveal><Portfolio /></Reveal>
+        <Reveal><Trainings /></Reveal>
+        <Reveal><Pricing /></Reveal>
+        <Reveal><Testimonials /></Reveal>
+        <Reveal><Contact /></Reveal>
       </main>
       <Footer />
       <WhatsAppButton />
