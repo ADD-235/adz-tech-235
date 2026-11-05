@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { background: #111A35; color: #fff; -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid #D6AC50; outline-offset: 3px; }
+.glow-gold { box-shadow: 0 0 40px -10px rgb(214 172 80 / 0.45); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
